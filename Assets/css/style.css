@@ -1,0 +1,389 @@
+
+
+
+HTML{
+    font-family: 'Courier New', Courier, monospace;
+  }
+ :root{
+  --main-radius:5px;
+  --main-padding:5px;
+
+ }
+   .container{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:0.2fr 0.1fr 1.5fr 1.2fr 1.2fr 0.8fr;
+    grid-template-areas: 
+                        "nav nav nav"
+                        "hero hero hero"
+                        "Aboutme main main"
+                        "Mywork content1 content2"
+                        "Mywork content3 content4"
+                        "Contactme footer footer";
+
+    grid-gap:0.8em;
+   
+                       
+
+  }
+.hlist{
+  list-style: none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:row;
+  justify-content:right;
+  align-items: right;
+  height: 100%;
+
+
+}
+.navagationitem{
+  margin:0 10px;
+}  
+nav {
+    background-color: rgba(138, 111, 207, 0.655); 
+    border-radius: var(--main-radius);
+    padding-top:var(--main-padding);
+
+    grid-area:nav;
+    
+  }
+
+nav a{
+    color: aliceblue;
+    font-size: 20px;
+    
+}
+nav a:hover {
+  color:blueviolet;
+  font-size: 25px;
+}
+    
+main{
+          background-color: white;
+          grid-area:main;
+          border-radius: var(--main-radius);
+          padding-top:var(--main-padding);
+          display:flex;
+          flex-direction: row;
+          justify-content:space-around;
+          margin-left: 1.0px;
+          text-align: justify;
+          padding: 0.5em;
+
+      font-size: 18px;
+      color:blueviolet;
+      font-style: italic;
+      text-align: justify;
+      
+
+
+    }
+  
+    
+    .hero{
+  
+      grid-area: hero;
+      display:flex;
+      justify-content: center;
+      text-align: right;
+  
+    }
+    .hero img {
+      margin:0 10px;
+      padding: 5px 0px;
+      border-radius: 4px;
+      border: 1px;
+      width:100%;
+     }
+     .hero p {
+  
+      position:absolute;
+      color:whitesmoke;
+      font-size:20px;
+      display:flex;
+      margin-bottom:0;
+      padding:0;
+      flex-direction:row;
+      justify-content:right;
+      justify-items: right; 
+     }
+    
+    #Aboutme{
+      background-color:white;
+      grid-area:Aboutme;   
+      border-radius: var(--main-radius);
+      padding-top:var(--main-padding);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding:auto;
+      border-right-color: blueviolet;
+      border-right-style:outset;
+      border-right-width: 0.4rem;      
+    
+    }
+
+    .ProfilePicture{
+      width: 30%;
+      
+    }
+
+   #Aboutme p{
+    font-size: 30px;
+      color:blueviolet;
+      text-align: center;    
+    }
+    
+    
+    
+    .Content1{
+  
+      grid-area: content1;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+    }
+
+    .image-content1 {
+  
+      border: 1px solid violet;
+      border-radius:4px;
+      padding: 5px;
+      width:100%;
+     
+     }
+     .image-content1:hover{
+      background-color: blueviolet;
+      width: 101%;
+     }
+     .Content1 p {
+  
+      position:absolute;
+      color:whitesmoke;
+      font-size:32px;
+      text-align: center;
+      
+  
+     }
+     
+  .Content2{
+  
+    grid-area: content2;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+
+  .image-content2 {
+
+    border: 1px solid violet;
+    border-radius:4px;
+    padding: 5px;
+    width:100%;
+   
+   }
+   .Content2 p {
+
+    position:absolute;
+    color:whitesmoke;
+    font-size:32px;
+    text-align: center;
+    
+
+   }
+  .image-content2:hover{
+    background-color: blueviolet;
+    width: 101%;
+    color:blueviolet;
+    box-sizing: border-box;
+    box-shadow: inset blueviolet;
+   }
+   
+   .Content3{
+  
+    grid-area: content3;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  .image-content3 {
+
+    border: 1px solid violet;
+    border-radius:4px;
+    padding: 5px;
+    width:100%;
+   
+   }
+   .image-content3:hover{
+    background-color: blueviolet;
+    width: 101%;
+   }
+   .Content3 p {
+
+    position:absolute;
+    color:whitesmoke;
+    font-size:32px;
+    text-align: center;   
+   }
+   .Content4{
+  
+    grid-area: content4;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  .image-content4 {
+
+    border: 1px solid violet;
+    border-radius:4px;
+    padding: 5px;
+    width:100%;
+   
+   }
+   .image-content4:hover{
+    background-color: blueviolet;
+    width: 101%;
+   }
+   .Content4 p {
+
+    position:absolute;
+    color:whitesmoke;
+    font-size:32px;
+    text-align: center;
+
+   }
+
+   #Mywork{
+    background-color:white;
+    grid-area: Mywork;
+    border-radius: var(--main-radius);
+    padding-top:var(--main-padding);
+    display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 30px;
+      color:blueviolet;
+      padding: auto;
+      border-right-color: blueviolet;
+      border-right-style:outset;
+      border-right-width: 0.4rem;      
+
+  }
+  #Contactme{
+    
+      background-color:white;
+      grid-area: Contactme;
+      border-radius: var(--main-radius);
+      padding-top:var(--main-padding);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 30px;
+      color:blueviolet;
+      padding: auto;
+      border-right-color: blueviolet;
+      border-right-style:outset;
+      border-right-width: 0.4rem; 
+  }
+  
+
+  h1 {
+    
+    color:purple;
+    font-size: 40px;
+    
+  }
+ 
+  
+
+  footer{
+  grid-area: footer;
+  background-color: white;
+  color:solid violet;
+  font: size 30px;
+  
+  
+}
+.flist{
+  list-style: none;
+  padding:50px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: center;
+  height: 100%;
+  color:blueviolet;
+  font-weight: bold;
+  
+}
+  @media only screen and (max-width:550px){
+
+    .hlist {
+      flex-direction: column;
+      align-items: center;
+    }
+    h1{
+      font-size: 20px;
+      align-items:center;
+      text-align: center;
+    }
+    .flist{
+      flex-direction: column;
+
+    }
+    #Aboutme{
+      border-bottom-color: blueviolet;
+      border-bottom-style:outset;
+      border-bottom-width: 0.4rem; 
+      border-right-color: none;
+      border-right-style:none;
+      border-right-width: none; 
+
+    }
+
+    #Mywork{
+      border-bottom-color: blueviolet;
+      border-bottom-style:outset;
+      border-bottom-width: 0.4rem; 
+      border-right-color: none;
+      border-right-style:none;
+      border-right-width: none; 
+
+    }
+    #Contactme{
+      border-bottom-color: blueviolet;
+      border-bottom-style:outset;
+      border-bottom-width: 0.4rem; 
+      border-right-color: none;
+      border-right-style:none;
+      border-right-width: none; 
+
+    }
+    .container{
+      grid-template-columns:1fr;
+      grid-template-rows:0.3fr 0.3fr 1.4fr 1.0fr 1.4fr 1.2fr 1.2fr 1.2fr 1.2fr 1.4fr 1.2fr;
+      grid-template-areas: "nav"
+                           "hero"
+                           "Aboutme"
+                           "main"
+                           "Mywork"
+                           "content1"
+                           "content2"
+                           "content3"
+                           "content4"
+                           "Contactme"
+                           "footer";
+
+    }                     
+  }
+    
+  
