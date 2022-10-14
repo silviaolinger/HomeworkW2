@@ -13,11 +13,12 @@ HTML{
     display:grid;
     height:100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:0.2fr 0.1fr 1.5fr 1.2fr 1.2fr 0.8fr;
+    grid-template-rows:0.2fr 0.1fr 1.5fr 0.1fr 1.2fr 1.2fr 0.8fr;
     grid-template-areas: 
                         "nav nav nav"
                         "hero hero hero"
                         "Aboutme main main"
+                        "Mywork content content"
                         "Mywork content1 content2"
                         "Mywork content3 content4"
                         "Contactme footer footer";
@@ -88,7 +89,7 @@ main{
       grid-area: hero;
       display:flex;
       justify-content: center;
-      text-align: right;
+      align-items: center;
   
     }
     .hero img {
@@ -139,16 +140,64 @@ main{
       text-align: center;    
     }
     
+    .Content{
+  
+      grid-area:content;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      
+
+    }
+  
+    
+    .image-content {
+      
+      border: 1px solid violet;
+      border-radius:4px;
+      padding: 10px;
+      max-width: 60%;
+      max-height: 110%;
+      
+    }
+    .Content a{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Content p {
+  
+      position:absolute;
+      color:whitesmoke;
+      font-size:32px;
+      text-align: var(--main-padding);
+     }
+
+     .Content p:hover {
+      font-size:52px;
+      cursor: pointer;
+    
+  
+     }
+     
+    .image-content:hover{
+      background-color: blueviolet;
+      max-width: 63%;
+      cursor: pointer;
+
+    }
     
     
     .Content1{
   
-      grid-area: content1;
+      grid-area:content1;
       display:flex;
       align-items:center;
-      justify-content: center;
+      justify-content:center;
+      
     }
-
     .image-content1 {
   
       border: 1px solid violet;
@@ -160,6 +209,7 @@ main{
      .image-content1:hover{
       background-color: blueviolet;
       width: 101%;
+      cursor: pointer;
      }
      .Content1 p {
   
@@ -168,9 +218,13 @@ main{
       font-size:32px;
       text-align: center;
       
-  
+      
      }
-     
+    
+     .Content1 p:hover {
+      font-size:52px;
+      cursor: pointer;
+     }
   .Content2{
   
     grid-area: content2;
@@ -187,7 +241,7 @@ main{
     width:100%;
    
    }
-   .Content2 p {
+   .Content2 p{
 
     position:absolute;
     color:whitesmoke;
@@ -201,7 +255,12 @@ main{
     width: 101%;
     color:blueviolet;
     box-sizing: border-box;
-    box-shadow: inset blueviolet;
+    cursor: pointer;
+  
+   }
+   .Content2 p:hover {
+    font-size:52px;
+    cursor: pointer;
    }
    
    .Content3{
@@ -222,14 +281,23 @@ main{
    .image-content3:hover{
     background-color: blueviolet;
     width: 101%;
+    cursor: pointer;
    }
    .Content3 p {
 
     position:absolute;
     color:whitesmoke;
     font-size:32px;
-    text-align: center;   
+    text-align: center;  
    }
+    
+    .Content3 p:hover {
+      font-size:52px;
+      cursor: pointer;
+     }
+
+   
+   
    .Content4{
   
     grid-area: content4;
@@ -248,7 +316,8 @@ main{
    .image-content4:hover{
     background-color: blueviolet;
     width: 101%;
-   }
+    cursor: pointer; 
+  }
    .Content4 p {
 
     position:absolute;
@@ -257,7 +326,10 @@ main{
     text-align: center;
 
    }
-
+   .Content4 p:hover {
+    font-size:52px;
+    cursor: pointer;
+   }
    #Mywork{
     background-color:white;
     grid-area: Mywork;
@@ -325,7 +397,87 @@ main{
   font-weight: bold;
   
 }
+
+@media only screen and (max-width:768px){
+  .container{
+     
+     grid-template-columns:1fr 1fr;
+     grid-template-rows:1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.3fr;
+     grid-template-areas:"nav nav"
+                         "hero hero"
+                         "Aboutme main"
+                         "Mywork content"
+                         "Mywork content1"
+                         "Mywork content2"
+                         "Mywork content3"
+                         "Mywork content4"
+                         "Contactme footer";
+ }
+
+ .hlist {
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  font-size: 20px;
+  align-items:center;
+  text-align: center;
+}
+.flist{
+  flex-direction: column;
+
+}
+
+ .image-content{
+
+  max-width: 100%;
+  max-height: 100%;
+  }
+
+  .image-content1{
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .image-content2{
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .image-content3{
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .image-content4{
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .image-content:hover{
+    cursor: pointer;
+    max-width: 101%;
+    min-height: 101%;
+  }
+}
+ 
   @media only screen and (max-width:550px){
+
+    .container{
+      grid-template-columns:1fr;
+      grid-template-rows:0.3fr 0.3fr 1.4fr 1.0fr 1.4fr 1.2 fr 1.2fr 1.2fr 1.2fr 1.2fr 1.4fr 1.2fr;
+      grid-template-areas: "nav"
+                           "hero"
+                           "Aboutme"
+                           "main"
+                           "Mywork"
+                           "content"
+                           "content1"
+                           "content2"
+                           "content3"
+                           "content4"
+                           "Contactme"
+                           "footer";
+    
+    }          
 
     .hlist {
       flex-direction: column;
@@ -357,6 +509,7 @@ main{
       border-right-color: none;
       border-right-style:none;
       border-right-width: none; 
+      margin-bottom: 5%;
 
     }
     #Contactme{
@@ -368,22 +521,37 @@ main{
       border-right-width: none; 
 
     }
-    .container{
-      grid-template-columns:1fr;
-      grid-template-rows:0.3fr 0.3fr 1.4fr 1.0fr 1.4fr 1.2fr 1.2fr 1.2fr 1.2fr 1.4fr 1.2fr;
-      grid-template-areas: "nav"
-                           "hero"
-                           "Aboutme"
-                           "main"
-                           "Mywork"
-                           "content1"
-                           "content2"
-                           "content3"
-                           "content4"
-                           "Contactme"
-                           "footer";
 
-    }                     
+    .image-content{
+
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+    .image-content1{
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .image-content2{
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .image-content3{
+      max-width: 80%;
+      max-height: 80%;
+    }
+    .image-content4{
+      max-width: 80%;
+      max-height: 80%;
+    }
+    .image-content:hover{
+      cursor: pointer;
+      max-width: 101%;
+      min-height: 101%;
+    }
+               
   }
     
   
