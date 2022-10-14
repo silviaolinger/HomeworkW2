@@ -463,7 +463,7 @@ h1{
 
     .container{
       grid-template-columns:1fr;
-      grid-template-rows:0.3fr 0.3fr 1.4fr 1.0fr 1.4fr 1.2 fr 1.2fr 1.2fr 1.2fr 1.2fr 1.4fr 1.2fr;
+      grid-template-rows:0.3fr 0.3fr 1.4fr 1.0fr 1.4fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.4fr 1.2fr;
       grid-template-areas: "nav"
                            "hero"
                            "Aboutme"
@@ -524,7 +524,7 @@ h1{
 
     .image-content{
 
-    max-width: 100%;
+    max-width: 90%;
     max-height: 100%;
     }
 
