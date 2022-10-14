@@ -413,7 +413,7 @@ main{
                          "Mywork content4"
                          "Contactme footer";
  }
-
+/* window resized */
  .hlist {
   flex-direction: column;
   align-items: center;
