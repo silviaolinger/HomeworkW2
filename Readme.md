@@ -6,3 +6,10 @@ The portifolio is located on GitHub, and it is adapted with responsive layout on
 
 *link: https://github.com/silviaolinger/HomeworkW2*
 
+*Below is a sample of the Page resized in 3 different dimensions*
+
+![](/Assets/images/Full-Screen.png)
+
+![](/Assets/images/Image2.png)
+
+![](/Assets/images/Image3.png)
